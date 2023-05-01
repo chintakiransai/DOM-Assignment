@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter App</title>
+    <style>
+      body {
+        margin-top :200px;
+        display:flex;
+        justify-content: center;
+        padding: 0px;
+        
+      }
+      .content {
+        
+        /* border : 2px solid black; */
+        max-width: 280px;
+        text-align: center;
+        padding: 10px;
+        box-shadow: 0 0 4px black;
+        
+      }
+      span {
+        border : 1px solid black;
+        padding: 2px 5px;
+      }
+      h3 {
+        margin : 5px;
+      }
+
+      div > button {
+        margin-top: 5px;
+        
+      }
+
+      button {
+        font-family: 'Times New Roman', Times, serif;
+        font-weight: bolder;
+      }
+
+    </style>
+</head>
+<body>
+  <main class="content">
+    <h3>Counter App</h3>
+    <button  onclick="dec()" >Decrement by 1</button>
+    <span id ="val">0</span>
+    <button onclick="inc()">Increment by 1</button>
+    <div><button onclick="res()">Reset value</button></div>
+  </main>
+    <script>
+        let value= document.getElementById("val");
+        let inc = () => {         
+           value.innerText= Number(value.innerText)+ 1;
+        }
+  
+        let dec = () => {           
+          value.innerText= Number(value.innerText)- 1;          
+        }
+
+        let res = () => {           
+          value.innerText= 0;          
+        }
+
+
+    </script>
+    
+</body>
+</html>

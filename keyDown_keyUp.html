@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="result">pres any key</p>
+    <script>
+	const res = document.querySelector("#result");
+
+	document.addEventListener("keydown",(e)=> {
+		res.innerHTML = `you have selected keydown ${e.key}`;
+		res.style.color="red";
+	});
+
+	document.addEventListener("keyup",(e)=> {
+		res.innerHTML = `this is keyUP ${e.key}`;
+		res.style.color="green";
+	});
+    </script>
+</body>
+</html>
